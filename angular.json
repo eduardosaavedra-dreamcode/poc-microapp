@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "devdactic-lib": {
+      "projectType": "library",
+      "root": "projects/devdactic-lib",
+      "sourceRoot": "projects/devdactic-lib/src",
+      "prefix": "dev",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/devdactic-lib/tsconfig.lib.json",
+            "project": "projects/devdactic-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/devdactic-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/devdactic-lib/src/test.ts",
+            "tsConfig": "projects/devdactic-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/devdactic-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/devdactic-lib/tsconfig.lib.json",
+              "projects/devdactic-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "devdactic-lib"
 }
