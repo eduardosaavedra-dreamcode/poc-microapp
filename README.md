@@ -29,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 En este repositorio esta condignado el resultado de pruebas de concepto relacionado a los micro frontend o microapp
 
-El proyecto esta estructurado en dos ramas
+El proyecto esta estructurado en las siguientes ramas
 
 La rama devdacticWorkspaceLibrary. Que es una rama de un proyecto angular como librería
 
