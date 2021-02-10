@@ -15,8 +15,22 @@
 
   <div id="container">
     <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 
-  <dev-devdactic-lib></dev-devdactic-lib>
+  <dev-custom-card  title="My Coold Library Card" content="There will be dragons"></dev-custom-card>
+  <ion-button expand="full" (click)="getData()">Load Data</ion-button>
+  <ion-button expand="full" routerLink="/custom">Open Library Page</ion-button>
+  
+
+  <ion-card *ngIf="user">
+    <img [src]="user.picture.large" alt="">
+    <ion-card-content>
+      {{ user.email }}
+    </ion-card-content>
+  </ion-card>
+
+  <div class="custom-box">hola</div>
+
 </ion-content>

@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'custom',
+    loadChildren: () => import('devdactic-lib').then( m => m.CustomPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

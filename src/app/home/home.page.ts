@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DevdacticLibService } from 'devdactic-lib';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  user = null;
 
-  constructor() {}
+  constructor(private devdacticLibService: DevdacticLibService) { }
+
+  getData() {
+    this.devdacticLibService.getData().subscribe(res => {
+      console.log('res ', res);
+      this.user = res;
+    });
+  }
 
 }
