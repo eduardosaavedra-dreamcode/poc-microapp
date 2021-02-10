@@ -1,14 +1,39 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, ModuleWithProviders, NgModule } from '@angular/core';
 import { DevdacticLibComponent } from './devdactic-lib.component';
 import { CustomCardComponent } from './custom-card/custom-card.component';
-import { CustomPageComponent } from './custom-page/custom-page.component';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { DevdacticLibService } from './devdactic-lib.service';
 
+export interface LibConfig {
+  apiUrl: string;
+}
 
+export const LibConfigService = new InjectionToken<LibConfig>('LibConfig');
 
 @NgModule({
-  declarations: [DevdacticLibComponent, CustomCardComponent, CustomPageComponent],
+  declarations: [DevdacticLibComponent, CustomCardComponent],
   imports: [
+    CommonModule,
+    HttpClientModule,
+    IonicModule
   ],
-  exports: [DevdacticLibComponent]
+  exports: [DevdacticLibComponent, CustomCardComponent]
 })
-export class DevdacticLibModule { }
+export class DevdacticLibModule {
+
+  static forRoot(config: LibConfig): ModuleWithProviders<DevdacticLibModule> {
+    return {
+      ngModule: DevdacticLibModule,
+      providers: [
+        DevdacticLibService,
+        {
+          provide: LibConfigService,
+          useValue: config
+        }
+      ]
+    };
+  }
+
+ }

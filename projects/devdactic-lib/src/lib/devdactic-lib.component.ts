@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'dev-devdactic-lib',
   template: `
     <p>
-      devdactic-lib works! hola
+      devdactic-lib works! 
     </p>
   `,
   styles: [

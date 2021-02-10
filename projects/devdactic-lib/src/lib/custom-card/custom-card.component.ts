@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'dev-custom-card',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-card.component.css']
 })
 export class CustomCardComponent implements OnInit {
+  @Input() title: string;
+  @Input() content: string;
 
   constructor() { }
 
