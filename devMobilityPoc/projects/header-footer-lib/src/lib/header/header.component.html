@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start" *ngIf="isBackButton; else noBackButton">
+            <ion-back-button defaultHref={{url}}></ion-back-button>
+        </ion-buttons>
+        <ng-template #noBackButton>
+            <ion-buttons slot="start">
+                <ion-button defaultHref="/">
+                    <ion-icon name="home"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ng-template>
+        <ion-title size="small">
+            header-footer-lib (devMobilityPoc)
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
