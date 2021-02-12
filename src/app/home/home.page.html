@@ -1,25 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<dev-header url="/" inputIsBackButton="false"></dev-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <dev-custom-card title="My Coold Library Card" content="There will be dragons. devdactic-lib (devdacticWorkspace)">
+  <ion-card>
+    <ion-item>
+      <ion-icon name="globe" slot="start"></ion-icon>
+      <ion-label>(Main App) Message from child: {{childMessage}}</ion-label>
+    </ion-item>
+  </ion-card>
+  <dev-custom-card title="My Coold Library Card" content="There will be dragons. This is devdactic-lib (devdacticWorkspace)" (outputFromChild)="getDataEmitter($event)">
   </dev-custom-card>
-
   <ion-card>
     <ion-item>
       <ion-icon name="color-fill" slot="start"></ion-icon>
-      <ion-label>Color example with css class in parent</ion-label>
+      <ion-label>css class (custom-box) in Main App</ion-label>
     </ion-item>
     <ion-card-content class="custom-box">
 
@@ -34,7 +27,7 @@
       <ion-button fill="outline" slot="end" routerLink="/devdactic-lib-custom">Open</ion-button>
     </ion-item>
     <ion-card-content>
-      devdactic-lib (devdacticWorkspace)
+      Go to devdactic-lib custom page (devdacticWorkspace)
     </ion-card-content>
   </ion-card>
 
@@ -45,7 +38,7 @@
       <ion-button fill="outline" slot="end" (click)="getData()">Load Data</ion-button>
     </ion-item>
     <ion-card-content>
-      devdactic-lib (devdacticWorkspace)
+      Using devdactic-lib (devdacticWorkspace)
     </ion-card-content>
   </ion-card>
   <ion-card *ngIf="user">
@@ -62,7 +55,7 @@
       <ion-button fill="outline" slot="end" routerLink="/dev-mobility-lib-home">Open</ion-button>
     </ion-item>
     <ion-card-content>
-      devMobility-lib (devMobilityPoc)
+      Go to devMobility-lib (devMobilityPoc)
     </ion-card-content>
   </ion-card>
 

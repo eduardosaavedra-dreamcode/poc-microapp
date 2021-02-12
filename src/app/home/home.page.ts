@@ -7,6 +7,7 @@ import { DevdacticLibService } from 'devdactic-lib';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  childMessage = "";
   user = null;
   constructor(private devdacticLibService: DevdacticLibService) { }
 
@@ -15,6 +16,10 @@ export class HomePage {
       console.log('res ', res);
       this.user = res;
     });
+  }
+
+  getDataEmitter($event: string) {
+    this.childMessage = $event;
   }
 
 }
