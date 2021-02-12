@@ -1,15 +1,23 @@
-<ion-header>
-    <ion-toolbar color="primary">
-        <ion-buttons slot="start">
-            <ion-back-button  defaultHref="/"></ion-back-button>
-        </ion-buttons>
-        <ion-title>
-            Devdactic Lib Page
-        </ion-title>
-    </ion-toolbar>
-</ion-header>
- 
+<dev-header url="/" inputIsBackButton="true"></dev-header>
 <ion-content>
-    <div class="custom-box"></div>
-    This is a full page from the library!
+    <ion-card>
+        <ion-item>
+          <ion-icon name="color-fill" slot="start"></ion-icon>
+          <ion-label>Color with css class (custom-box) in child</ion-label>
+        </ion-item>
+        <ion-card-content class="custom-box">
+    
+        </ion-card-content>
+      </ion-card>
+
+    <ion-card>
+        <ion-item>
+          <ion-icon name="information-circle" slot="start"></ion-icon>
+          <ion-label>devdactic-lib</ion-label>
+        </ion-item>
+        <ion-card-content>
+            devdactic-lib custom page (devdacticWorkspace)
+        </ion-card-content>
+      </ion-card>
 </ion-content>
+<dev-footer appName="Aplicación hijo devdactic-lib"></dev-footer>
