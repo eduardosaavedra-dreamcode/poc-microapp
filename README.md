@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+En este repositorio esta condignado el resultado de pruebas de concepto relacionado a los micro frontend o microapp
+
+El proyecto esta estructurado en las siguientes ramas
+
+La rama devdacticWorkspaceLibrary. Que es una rama de un proyecto angular como librería
+
+La rama devdacticLibraryApp que es la rama padre que incorpora todas las librerias
