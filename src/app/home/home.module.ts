@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { DevdacticLibModule } from 'devdactic-lib';
+import { HeaderFooterLibModule } from 'header-footer-lib';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { DevdacticLibModule } from 'devdactic-lib';
     IonicModule,
     HomePageRoutingModule,
     DevdacticLibModule,
+    HeaderFooterLibModule
   ],
   declarations: [HomePage]
 })

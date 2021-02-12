@@ -8,7 +8,6 @@ import { DevdacticLibService } from 'devdactic-lib';
 })
 export class HomePage {
   user = null;
-
   constructor(private devdacticLibService: DevdacticLibService) { }
 
   getData() {

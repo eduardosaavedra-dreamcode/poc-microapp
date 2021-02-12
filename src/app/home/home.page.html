@@ -13,17 +13,41 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer"
-        href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <dev-custom-card title="My Coold Library Card" content="There will be dragons. devdactic-lib (devdacticWorkspace)">
+  </dev-custom-card>
 
-  <dev-custom-card  title="My Coold Library Card" content="There will be dragons"></dev-custom-card>
-  <ion-button expand="full" (click)="getData()">Load Data</ion-button>
-  <ion-button expand="full" routerLink="/custom">Open Library Page</ion-button>
-  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="color-fill" slot="start"></ion-icon>
+      <ion-label>Color example with css class in parent</ion-label>
+    </ion-item>
+    <ion-card-content class="custom-box">
 
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="link" slot="start"></ion-icon>
+      <ion-label>devdactic-lib </ion-label>
+      <ion-button fill="outline" slot="end" routerLink="/devdactic-lib-custom">Open</ion-button>
+    </ion-item>
+    <ion-card-content>
+      devdactic-lib (devdacticWorkspace)
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="download" slot="start"></ion-icon>
+      <ion-label>devdactic-lib </ion-label>
+      <ion-button fill="outline" slot="end" (click)="getData()">Load Data</ion-button>
+    </ion-item>
+    <ion-card-content>
+      devdactic-lib (devdacticWorkspace)
+    </ion-card-content>
+  </ion-card>
   <ion-card *ngIf="user">
     <img [src]="user.picture.large" alt="">
     <ion-card-content>
@@ -31,6 +55,16 @@
     </ion-card-content>
   </ion-card>
 
-  <div class="custom-box">hola</div>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="link" slot="start"></ion-icon>
+      <ion-label>devMobility-lib</ion-label>
+      <ion-button fill="outline" slot="end" routerLink="/dev-mobility-lib-home">Open</ion-button>
+    </ion-item>
+    <ion-card-content>
+      devMobility-lib (devMobilityPoc)
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
+<dev-footer appName="Aplicación principal devdacticLibraryApp"></dev-footer>
