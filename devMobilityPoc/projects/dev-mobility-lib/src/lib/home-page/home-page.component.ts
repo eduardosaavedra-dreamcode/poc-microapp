@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DevMobilityLibService } from '../dev-mobility-lib.service';
 
 @Component({
   selector: 'dev-home-page',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private devMobilityLibService: DevMobilityLibService) { }
 
   ngOnInit(): void {
+    console.log(this.devMobilityLibService.getEnvironment());
   }
 
 }
