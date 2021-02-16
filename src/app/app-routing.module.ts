@@ -11,8 +11,8 @@ const routes: Routes = [
     loadChildren: () => import('devdactic-lib').then( m => m.CustomPageModule)
   },
   {
-    path: 'dev-mobility-lib-home',
-    loadChildren: () => import('dev-mobility-lib').then( m => m.HomePageModule)
+    path: 'home/dev-mobility-lib-menu',
+    loadChildren: () => import('dev-mobility-lib').then( m => m.MenuModule)
   },
   {
     path: '',
