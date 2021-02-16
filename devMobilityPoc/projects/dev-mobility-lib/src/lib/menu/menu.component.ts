@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
         },
         {
           title: 'QR Scanner',
-          url: '/home/dev-mobility-lib-menu/home',
+          url: '/home/dev-mobility-lib-menu/qr-scanner',
           icon: 'logo-ionic'
         },
       ]
