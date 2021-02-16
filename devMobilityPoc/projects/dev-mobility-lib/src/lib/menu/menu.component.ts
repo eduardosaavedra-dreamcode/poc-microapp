@@ -13,18 +13,23 @@ export class MenuComponent implements OnInit {
       icon: 'home'
     },
     {
-      title: 'Cool Frameworks',
+      title: 'Environment',
+      url: '/home/dev-mobility-lib-menu/home',
+      icon: 'construct'
+    },
+    {
+      title: 'Device',
       children: [
-        {
-          title: 'Home',
-          url: '/home/dev-mobility-lib-menu/home',
-          icon: 'logo-ionic'
-        },
         {
           title: 'Camera',
           url: '/home/dev-mobility-lib-menu/camera',
           icon: 'logo-google'
-        }
+        },
+        {
+          title: 'QR Scanner',
+          url: '/home/dev-mobility-lib-menu/home',
+          icon: 'logo-ionic'
+        },
       ]
 
     }

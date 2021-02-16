@@ -4,9 +4,6 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu.component';
 import { MenuRoutingModule } from './menu-routing.module';
-
-
-
  
 @NgModule({
   imports: [

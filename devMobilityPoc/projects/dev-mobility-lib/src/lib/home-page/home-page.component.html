@@ -1,26 +1,68 @@
 <ion-header>
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>main</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-  
-    <ion-card>
-        <ion-item>
-          <ion-icon name="link" slot="start"></ion-icon>
-          <ion-label>devMobility-lib</ion-label>
-          <ion-button fill="outline" slot="end" routerLink="/home/dev-mobility-lib-menu/camera">Open</ion-button>
-        </ion-item>
-        <ion-card-content>
-          Go to devMobility-lib (devMobilityPoc)
-        </ion-card-content>
-      </ion-card>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Environment</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  </ion-content>
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label>logintr</ion-label>
+    </ion-item>
+    <ion-card-content>
+      {{ dataEnvironment["logintr"] }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>logintrenv</ion-label>
+    </ion-item>
+    <ion-card-content>
+      {{ dataEnvironment["logintrenv"] }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>blogApiTerms</ion-label>
+    </ion-item>
+    <ion-card-content>
+      {{ dataEnvironment["blogApiTerms"] }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>blogApiPolicies</ion-label>
+    </ion-item>
+    <ion-card-content>
+      {{ dataEnvironment["blogApiPolicies"] }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>bienestarUrlApi</ion-label>
+    </ion-item>
+    <ion-card-content>
+      {{ dataEnvironment["bienestarUrlApi"] }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>base64EncodedKeyFromJava</ion-label>
+    </ion-item>
+    <ion-card-content>
+      {{ dataEnvironment["base64EncodedKeyFromJava"] }}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
 
 
 <dev-footer appName="Aplicación hijo dev-mobility-lib"></dev-footer>
