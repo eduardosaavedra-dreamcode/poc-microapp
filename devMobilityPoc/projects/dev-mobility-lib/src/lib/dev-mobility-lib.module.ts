@@ -3,6 +3,7 @@ import { DevMobilityLibComponent } from './dev-mobility-lib.component';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { IEnvironment } from './interfaces/environment';
+import { CameraComponent } from './camera/camera.component';
 
 export const environmentService = new InjectionToken<IEnvironment>('env');
 @NgModule({
