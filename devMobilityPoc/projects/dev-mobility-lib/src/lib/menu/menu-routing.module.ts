@@ -5,7 +5,7 @@ import { MenuComponent } from './menu.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo : 'dev-mobility-lib-menu/home',
+    redirectTo : 'home',
     pathMatch: 'full'
   },
   {
