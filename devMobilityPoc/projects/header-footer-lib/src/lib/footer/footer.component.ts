@@ -19,15 +19,15 @@ export class FooterComponent implements OnInit {
 
   async showAlert() {
     const alertElement = await this.alertCtrl.create({
-      header: 'Are you sure, you want to confirm it?',
-      message: `Message from ${this.appName}`,
+      header: 'Seguro de confirmar?',
+      message: `Mensaje de la ${this.appName}`,
       buttons: [
         {
           text: 'Cancel',
-          role: 'cancel'
+          role: 'cancelar'
         },
         {
-          text: 'Ok',
+          text: 'Sí',
           handler: () => {
             this.presentToast();
           }
@@ -40,7 +40,7 @@ export class FooterComponent implements OnInit {
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: `Message from ${this.appName}`,
+      message: `Mensaje de la ${this.appName}`,
       position: 'top',
       duration: 2000
     });

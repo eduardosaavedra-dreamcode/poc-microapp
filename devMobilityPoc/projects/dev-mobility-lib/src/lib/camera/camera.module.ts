@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CameraComponent } from './camera.component';
 import { CameraRoutingModule } from './camera-routing.module';
+import { HeaderFooterLibModule } from 'header-footer-lib';
 
 
  
@@ -12,7 +13,8 @@ import { CameraRoutingModule } from './camera-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    CameraRoutingModule
+    CameraRoutingModule,
+    HeaderFooterLibModule
   ],
   declarations: [CameraComponent]
 })

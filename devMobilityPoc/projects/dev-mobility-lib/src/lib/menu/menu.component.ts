@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
   pages = [
     {
-      title: ' Main',
+      title: 'Ir a superApp',
       url: '/',
       icon: 'home'
     },
@@ -18,15 +18,15 @@ export class MenuComponent implements OnInit {
       icon: 'construct'
     },
     {
-      title: 'Device',
+      title: 'Dispositivo',
       children: [
         {
-          title: 'Camera',
+          title: 'Cámara',
           url: '/home/dev-mobility-lib-menu/camera',
           icon: 'logo-google'
         },
         {
-          title: 'QR Scanner',
+          title: 'Lector código QR',
           url: '/home/dev-mobility-lib-menu/qr-scanner',
           icon: 'logo-ionic'
         },
