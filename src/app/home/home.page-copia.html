@@ -4,15 +4,15 @@
   <ion-card>
     <ion-item>
       <ion-icon name="globe" slot="start"></ion-icon>
-      <ion-label>(SuperApp) {{childMessage}}</ion-label>
+      <ion-label>(Main App) Message: {{childMessage}}</ion-label>
     </ion-item>
   </ion-card>
-  <dev-custom-card title="Título de la superApp" content="Mensaje de la superApp: Este card es un componente de la microApp-1" (outputFromChild)="getDataEmitter($event)">
+  <dev-custom-card title="My Coold Library Card" content="There will be dragons. This is devdactic-lib (devdacticWorkspace)" (outputFromChild)="getDataEmitter($event)">
   </dev-custom-card>
   <ion-card>
     <ion-item>
       <ion-icon name="color-fill" slot="start"></ion-icon>
-      <ion-label>css (custom-box) de superApp</ion-label>
+      <ion-label>css class (custom-box) in Main App</ion-label>
     </ion-item>
     <ion-card-content class="custom-box">
 
@@ -23,22 +23,22 @@
   <ion-card>
     <ion-item>
       <ion-icon name="link" slot="start"></ion-icon>
-      <ion-label>Ir microApp-1</ion-label>
-      <ion-button fill="outline" slot="end" routerLink="/devdactic-lib-custom">Abrir</ion-button>
+      <ion-label>devdactic-lib </ion-label>
+      <ion-button fill="outline" slot="end" routerLink="/devdactic-lib-custom">Open</ion-button>
     </ion-item>
     <ion-card-content>
-      Card de superApp que envía al mundo de la microApp-1
+      Go to devdactic-lib custom page (devdacticWorkspace)
     </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-item>
       <ion-icon name="download" slot="start"></ion-icon>
-      <ion-label>superApp usa microApp-1 </ion-label>
-      <ion-button fill="outline" slot="end" (click)="getData()">Ver</ion-button>
+      <ion-label>devdactic-lib </ion-label>
+      <ion-button fill="outline" slot="end" (click)="getData()">Load Data</ion-button>
     </ion-item>
     <ion-card-content>
-      Card SuperApp que usa servicio de microApp-1
+      Using devdactic-lib (devdacticWorkspace)
     </ion-card-content>
   </ion-card>
   <ion-card *ngIf="user">
@@ -51,13 +51,13 @@
   <ion-card>
     <ion-item>
       <ion-icon name="link" slot="start"></ion-icon>
-      <ion-label>Ir microApp-2</ion-label>
-      <ion-button fill="outline" slot="end" routerLink="dev-mobility-lib-menu">Abrir</ion-button>
+      <ion-label>devMobility-lib</ion-label>
+      <ion-button fill="outline" slot="end" routerLink="dev-mobility-lib-menu">Open</ion-button>
     </ion-item>
     <ion-card-content>
-      Card de la superApp que envía al mundo microApp-2
+      Go to devMobility-lib (devMobilityPoc)
     </ion-card-content>
   </ion-card>
 
 </ion-content>
-<dev-footer appName="Aplicación principal superApp"></dev-footer>
+<dev-footer appName="Aplicación principal devdacticLibraryApp"></dev-footer>
