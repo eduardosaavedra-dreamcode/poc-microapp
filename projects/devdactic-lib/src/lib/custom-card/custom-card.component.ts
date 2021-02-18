@@ -17,7 +17,7 @@ export class CustomCardComponent implements OnInit {
   }
 
   emitterDataToParent() {
-    this.outputFromChild.emit("Hi!");
+    this.outputFromChild.emit("Hola!. desde microApp-1");
   }
 
 }
