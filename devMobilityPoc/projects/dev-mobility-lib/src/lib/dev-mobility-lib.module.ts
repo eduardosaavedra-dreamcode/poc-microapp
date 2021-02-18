@@ -3,7 +3,6 @@ import { DevMobilityLibComponent } from './dev-mobility-lib.component';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { IEnvironment } from './interfaces/environment';
-import { QrScannerComponent } from './qr-scanner/qr-scanner.component';
 
 export const environmentService = new InjectionToken<IEnvironment>('env');
 @NgModule({

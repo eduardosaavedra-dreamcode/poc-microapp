@@ -8,10 +8,11 @@ import { DevMobilityLibService } from '../dev-mobility-lib.service';
 })
 export class HomePageComponent implements OnInit {
   dataEnvironment: { [index: string]: any; } = {};
+  token: string;
 
   constructor(private devMobilityLibService: DevMobilityLibService) { }
-
   ngOnInit(): void {
+    this.token = localStorage.getItem('token');
     console.log(this.devMobilityLibService.getEnvironment());
     this.dataEnvironment["logintr"] = this.devMobilityLibService.getEnvironment().logintr;
     this.dataEnvironment["logintrenv"] = this.devMobilityLibService.getEnvironment().logintrenv;

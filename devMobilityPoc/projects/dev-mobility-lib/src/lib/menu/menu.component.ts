@@ -31,7 +31,11 @@ export class MenuComponent implements OnInit {
           icon: 'logo-ionic'
         },
       ]
-
+    },
+    {
+      title: 'Tareas',
+      url: '/home/dev-mobility-lib-menu/tasks',
+      icon: 'clipboard'
     }
   ]
   constructor() { }

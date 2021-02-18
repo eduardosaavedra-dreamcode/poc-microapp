@@ -9,3 +9,4 @@ export * from './lib/home-page/home-page.module';
 export * from './lib/camera/camera.module';
 export * from './lib/menu/menu.module';
 export * from './lib/qr-scanner/qr-scanner.module';
+export * from './lib/tasks-page/tasks-page.module';

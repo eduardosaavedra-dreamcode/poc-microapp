@@ -23,6 +23,10 @@ const routes: Routes = [
       {
         path: 'qr-scanner',
         loadChildren: () => import('../qr-scanner/qr-scanner.module').then( m => m.QrScannerModule)
+      },
+      {
+        path: 'tasks',
+        loadChildren: () => import('../tasks-page/tasks-page.module').then( m => m.TasksPageModule)
       }
     ]
   }
