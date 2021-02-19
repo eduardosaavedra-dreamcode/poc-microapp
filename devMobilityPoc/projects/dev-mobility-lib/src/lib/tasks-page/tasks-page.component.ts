@@ -56,7 +56,7 @@ export class TasksPageComponent implements OnInit {
 
   createTask(title: string) {
     const task = {
-      userId: '1',
+      userId: `${this.tasks.length +1}`,
       title,
       completed: false
     };
@@ -75,6 +75,7 @@ export class TasksPageComponent implements OnInit {
   }
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({
+      position:'top',
       message,
       duration: 2000
     });
