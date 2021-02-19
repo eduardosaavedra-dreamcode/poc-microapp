@@ -9,6 +9,6 @@ import { Storage } from '@ionic/storage';
 export class AppComponent implements OnInit{
   constructor(private storage: Storage) {}
   ngOnInit(): void {
-    this.storage.set('token', 'token123456789')
+    this.storage.set('token', 'token123456789');
   }
 }

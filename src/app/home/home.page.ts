@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 import { DevdacticLibService } from 'devdactic-lib';
 
 @Component({
@@ -6,10 +8,17 @@ import { DevdacticLibService } from 'devdactic-lib';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
   childMessage = "";
   user = null;
-  constructor(private devdacticLibService: DevdacticLibService) { }
+  constructor(private devdacticLibService: DevdacticLibService,
+    private router: Router,
+    private storage: Storage
+  ) {
+   }
+  ngOnInit(): void {
+    this.storage.set('appName', 'superApp');
+  }
 
   getData() {
     this.devdacticLibService.getData().subscribe(res => {
@@ -20,6 +29,10 @@ export class HomePage {
 
   getDataEmitter($event: string) {
     this.childMessage = $event;
+  }
+
+  goToMicroApp2() {
+    this.router.navigate(['home/dev-mobility-lib-menu']);
   }
 
 }

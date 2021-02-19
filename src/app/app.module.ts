@@ -10,7 +10,8 @@ import { DevdacticLibModule } from 'devdactic-lib';
 import { DevMobilityLibModule } from 'dev-mobility-lib';
 import { environmentDevMobilityPoc } from 'src/environments/environmentDevMobilityPoc';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { HTTP_INTERCEPTORS} from '@angular/common/http';
+import { InterceptorService } from './provider/interceptor/interceptor.service';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,7 +23,8 @@ import { IonicStorageModule } from '@ionic/storage';
     DevMobilityLibModule.forRoot(environmentDevMobilityPoc),
   ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}
   ],
   bootstrap: [AppComponent],
 })
