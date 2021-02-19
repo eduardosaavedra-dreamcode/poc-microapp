@@ -5,5 +5,6 @@ export interface IEnvironment {
     blogApiTerms: string,
     blogApiPolicies: string,
     bienestarUrlApi: string,
-    base64EncodedKeyFromJava: string
+    base64EncodedKeyFromJava: string,
+    apiTasks: string
 }

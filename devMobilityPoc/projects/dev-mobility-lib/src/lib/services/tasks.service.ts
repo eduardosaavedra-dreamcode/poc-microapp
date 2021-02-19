@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Task } from '../interfaces/task';
+import { DevMobilityLibService } from '../dev-mobility-lib.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TasksService {
   
-  private api = 'https://jsonplaceholder.typicode.com';
+  private api: string;
   constructor(
-    private http: HttpClient
-  ) { }
+    private http: HttpClient,
+    private devMobilityLibService: DevMobilityLibService
+  ) { 
+    this.api = this.devMobilityLibService.getEnvironment().apiTasks;
+  }
 
   getAllTasks() {
     const path = `${this.api}/todos/`;

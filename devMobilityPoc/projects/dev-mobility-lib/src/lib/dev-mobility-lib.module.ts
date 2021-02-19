@@ -3,13 +3,15 @@ import { DevMobilityLibComponent } from './dev-mobility-lib.component';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { IEnvironment } from './interfaces/environment';
+import { IonicStorageModule } from '@ionic/storage';
 
 export const environmentService = new InjectionToken<IEnvironment>('env');
 @NgModule({
   declarations: [DevMobilityLibComponent],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    IonicStorageModule.forRoot()
   ],
   exports: [DevMobilityLibComponent]
 })

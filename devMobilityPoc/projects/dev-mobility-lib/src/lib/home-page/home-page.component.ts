@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DevMobilityLibService } from '../dev-mobility-lib.service';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'dev-home-page',
@@ -10,9 +11,11 @@ export class HomePageComponent implements OnInit {
   dataEnvironment: { [index: string]: any; } = {};
   token: string;
 
-  constructor(private devMobilityLibService: DevMobilityLibService) { }
+  constructor(private devMobilityLibService: DevMobilityLibService, private storage: Storage) { }
   ngOnInit(): void {
-    this.token = localStorage.getItem('token');
+    this.storage.get('token').then(token => {
+      this.token = token;
+    });
     console.log(this.devMobilityLibService.getEnvironment());
     this.dataEnvironment["logintr"] = this.devMobilityLibService.getEnvironment().logintr;
     this.dataEnvironment["logintrenv"] = this.devMobilityLibService.getEnvironment().logintrenv;
