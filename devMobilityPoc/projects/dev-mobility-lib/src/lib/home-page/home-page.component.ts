@@ -16,6 +16,7 @@ export class HomePageComponent implements OnInit {
     this.storage.get('token').then(token => {
       this.token = token;
     });
+    this.storage.set('appName','microApp2')
     console.log(this.devMobilityLibService.getEnvironment());
     this.dataEnvironment["logintr"] = this.devMobilityLibService.getEnvironment().logintr;
     this.dataEnvironment["logintrenv"] = this.devMobilityLibService.getEnvironment().logintrenv;
