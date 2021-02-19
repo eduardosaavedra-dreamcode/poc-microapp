@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent implements OnInit{
-  constructor() {}
+  constructor(private storage: Storage) {}
   ngOnInit(): void {
-    localStorage.setItem('token', '123');
+    this.storage.set('token', 'token123456789')
   }
 }
