@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DevMobilityLibService } from '../dev-mobility-lib.service';
 import { Storage } from '@ionic/storage';
+import { Observable } from 'rxjs';
+import { select, Store } from '@ngrx/store';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'dev-home-page',
@@ -8,11 +11,20 @@ import { Storage } from '@ionic/storage';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  count$ : Observable<number>;
+  
   dataEnvironment: { [index: string]: any; } = {};
   token: string;
 
-  constructor(private devMobilityLibService: DevMobilityLibService, private storage: Storage) { }
+  constructor(private devMobilityLibService: DevMobilityLibService, private storage: Storage,
+    private store: Store<{ count: number}>
+    ) { }
   ngOnInit(): void {
+    this.count$ = this.store.pipe(
+      select('count')
+    );
+
+
     this.storage.get('token').then(token => {
       this.token = token;
     });

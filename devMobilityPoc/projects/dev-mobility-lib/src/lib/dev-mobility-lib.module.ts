@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { IEnvironment } from './interfaces/environment';
 import { IonicStorageModule } from '@ionic/storage';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './Redux/contador.reducers';
 
 export const environmentService = new InjectionToken<IEnvironment>('env');
 @NgModule({
@@ -11,7 +13,8 @@ export const environmentService = new InjectionToken<IEnvironment>('env');
   imports: [
     CommonModule,
     IonicModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    StoreModule.forRoot({ count: counterReducer}, {})
   ],
   exports: [DevMobilityLibComponent]
 })

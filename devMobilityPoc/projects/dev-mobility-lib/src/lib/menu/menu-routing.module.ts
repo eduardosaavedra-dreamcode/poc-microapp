@@ -27,6 +27,10 @@ const routes: Routes = [
       {
         path: 'tasks',
         loadChildren: () => import('../tasks-page/tasks-page.module').then( m => m.TasksPageModule)
+      },
+      {
+        path: 'redux',
+        loadChildren: () => import('../redux-page/redux-page.module').then( m => m.ReduxPageModule)
       }
     ]
   }

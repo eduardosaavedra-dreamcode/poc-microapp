@@ -36,6 +36,11 @@ export class MenuComponent implements OnInit {
       title: 'Tareas',
       url: '/home/dev-mobility-lib-menu/tasks',
       icon: 'clipboard'
+    },
+    {
+      title: 'Redux',
+      url: '/home/dev-mobility-lib-menu/redux',
+      icon: 'cloud-circle'
     }
   ]
   constructor() { }
