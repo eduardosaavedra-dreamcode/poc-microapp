@@ -3,6 +3,15 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-item>
+      <ion-label>Contador Redux: {{ count$ | async}}</ion-label>
+    </ion-item>
+    <ion-card-content>
+     Contador Redux de microApp-2 opción Redux
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
       <ion-icon name="globe" slot="start"></ion-icon>
       <ion-label>(SuperApp) {{childMessage}}</ion-label>
     </ion-item>
